@@ -1,0 +1,63 @@
+header{
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-template-rows: 150px 50px;
+	grid-template-areas: "headerLogo  headerTitulo  headerTitulo    headerTitulo   "
+						 "headerLogo  headerMenu    headerMenu      headerMenu     "	
+}
+
+div img{
+ 	height: 250px;
+ 	width: 350px;
+}
+
+.headerLogo{
+	grid-area:headerLogo;
+	background: $color-fondo-logo;
+}
+
+.headerTitulo{
+	grid-area:headerTitulo;
+	background: $color-fondo-logo;
+}
+
+.headerMenu{
+	grid-area:headerMenu;
+	background: $color-fondo-logo;
+}
+
+.fotos{
+ 	padding: center;
+ 	height: 200px;
+ 	width: 300px;
+}
+.titulos{
+	@extend %fuenteComun;
+	font-size: 54px;
+	background-image: linear-gradient(to left, violet,green, yellow, pink);
+	border: double 10px blue;
+	width: 770px;
+	height: 100px;
+	text-align: center;
+	animation: animacion 6s infinite;
+}
+
+.Menu {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around; 
+	align-items: center;
+	
+}
+
+@keyframes animacion{
+	from{
+		transform: scale(1);
+	}
+	50%{
+		transform: scale(1.3);
+	}
+	to{
+		transform: scale(1);
+	}
+}

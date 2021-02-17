@@ -1,0 +1,65 @@
+
+main{
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-template-rows: 100px 400px;
+	grid-template-areas: "subtitulos  subtitulos    subtitulos      subtitulos     "
+						 "contenido   contenido     listaContenido  listaContenido "
+}
+
+table{
+ 	margin: 50px;
+}
+
+tr td ul li{
+ 	display: block;
+ 	position: relative;
+}
+
+ul{
+	color: $color-listas;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+h2{
+	color:$color-listas;
+	font-size: 30px;
+	font-family: comics;
+}
+
+ol{
+	color: $color-listas;
+	font-weight: bold;
+	list-style-type: none;
+	text-transform: uppercase;
+}
+.subtitulos{
+	grid-area:subtitulos;
+	font-weight: bold;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	justify-items: space-around;
+	align-items: space-around;
+	justify-content: space-evenly;
+	align-content:space-around;
+	padding: 20px;
+		
+}
+
+.contenido{
+	grid-area:contenido;
+	display: flex;
+	flex-direction: row;
+	justify-content: center; 
+	align-items: center;
+}
+
+.listaContenido{
+	grid-area:listaContenido;
+	display: flex;
+	flex-direction: columns;
+	justify-content: center; 
+	align-items: center;
+
+}

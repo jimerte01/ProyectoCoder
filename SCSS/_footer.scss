@@ -1,0 +1,6 @@
+.footer{
+	@extend %fuenteComun;
+	grid-area:footer;
+	font-weight: bold;
+	text-align: center;
+}
